@@ -109,22 +109,17 @@
                 <div class="ibox-content">
                     <div class="row">
                         <div class="col-md-5">
-                            <div class="product-images">
+                            <div class="product-images product-box">
                                 <div>
-                                    <div class="image-imitation">
-                                        [IMAGE 1]
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <div class="image-imitation">
-                                        [IMAGE 2]
+                                    <div class="slick_demo_1">
+                                        <img src="img/a1.jpg">
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="image-imitation">
-                                        [IMAGE 3]
+                                    <div class="slick_demo_1">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jp9_1w30J-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-7">
@@ -328,6 +323,9 @@
 <script>
 
     $(document).ready(function () {
+        $('.slick_demo_1').slick({
+                dots: true
+            });
 
         $('body').scrollspy({
             target: '.navbar-fixed-top',
@@ -349,7 +347,7 @@
         var docElem = document.documentElement,
                 header = document.querySelector( '.navbar-default' ),
                 didScroll = false,
-                changeHeaderOn = 200;
+                changeHeaderOn = 0;
         function init() {
             window.addEventListener( 'scroll', function( event ) {
                 if( !didScroll ) {
@@ -386,8 +384,8 @@
 var img = document.getElementById('test').firstChild;
 img.onload = function() {
     if(img.height > img.width) {
-        img.height = '100%';
-        img.width = 'auto';
+        img.width = '100%';
+        img.height = 'auto';
     }
 };
 
